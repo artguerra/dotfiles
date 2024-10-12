@@ -1,0 +1,51 @@
+BasedOnStyle: Google
+
+# indentation settings
+IndentWidth: 4
+UseTab: Never
+AccessModifierOffset: -2
+
+# spacing settings
+EmptyLineBeforeAccessModifier: LogicalBlock
+SpacesInParentheses: false
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpaceAfterCStyleCast: false
+
+# column width settings
+ColumnLimit: 100
+
+# allow short statements on a single line
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortEnumsOnASingleLine: true
+
+# brace style settings
+BreakBeforeBraces: Attach
+SpaceBeforeParens: ControlStatements
+AlignAfterOpenBracket: BlockIndent  # function call argument positioning
+
+# comment spacing
+SpacesBeforeTrailingComments: 2
+
+# pointer and reference formatting
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# include order settings
+SortIncludes: CaseInsensitive
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^<[^\/]+>'  # STL libraries (or native)
+    Priority: 1
+  - Regex: '^<.*>'  # other installed libraries
+    Priority: 2
+  - Regex: '^"'  # local project headers
+    Priority: 3
+
+# other formatting preferences
+IndentCaseLabels: true
+AlignTrailingComments: true
+InsertNewlineAtEOF: true
+AlignArrayOfStructures: Right
