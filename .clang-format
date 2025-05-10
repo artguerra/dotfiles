@@ -1,9 +1,9 @@
 BasedOnStyle: Google
 
 # indentation settings
-IndentWidth: 4
+IndentWidth: 2
 UseTab: Never
-AccessModifierOffset: -2
+AccessModifierOffset: -1
 
 # spacing settings
 EmptyLineBeforeAccessModifier: LogicalBlock
@@ -24,7 +24,7 @@ AllowShortEnumsOnASingleLine: true
 # brace style settings
 BreakBeforeBraces: Attach
 SpaceBeforeParens: ControlStatements
-AlignAfterOpenBracket: BlockIndent  # function call argument positioning
+AlignAfterOpenBracket: BlockIndent # function call argument positioning
 
 # comment spacing
 SpacesBeforeTrailingComments: 2
@@ -37,15 +37,19 @@ ReferenceAlignment: Left
 SortIncludes: CaseInsensitive
 IncludeBlocks: Regroup
 IncludeCategories:
-  - Regex: '^<[^\/]+>'  # STL libraries (or native)
+  - Regex: '^<[^\/]+>' # STL libraries (or native)
     Priority: 1
-  - Regex: '^<.*>'  # other installed libraries
+  - Regex: "^<.*>" # other installed libraries
     Priority: 2
-  - Regex: '^"'  # local project headers
+  - Regex: '^"' # local project headers
     Priority: 3
+
+InsertNewlineAtEOF: true
+KeepEmptyLines:
+  AtEndOfFile: true
+MaxEmptyLinesToKeep: 1
 
 # other formatting preferences
 IndentCaseLabels: true
 AlignTrailingComments: true
-InsertNewlineAtEOF: true
 AlignArrayOfStructures: Right
