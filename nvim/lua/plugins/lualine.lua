@@ -7,7 +7,7 @@ return {
 
     lualine.setup({
       options = {
-        theme = "catppuccin",
+        theme = "dracula",
       },
       sections = {
         lualine_x = {
@@ -24,4 +24,3 @@ return {
     })
   end,
 }
-

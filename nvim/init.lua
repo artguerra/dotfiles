@@ -1,3 +1,2 @@
-require("guerra.core")
-require("guerra.lazy")
-
+require("config.core")
+require("config.lazy")

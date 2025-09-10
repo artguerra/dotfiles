@@ -1,7 +1,9 @@
-vim.cmd("let g:netrw_liststyle = 3")
-
 local opt = vim.opt
 
+-- netrw without nvim-tree
+-- vim.cmd("let g:netrw_liststyle = 3")
+
+-- line numbering
 opt.relativenumber = true
 opt.number = true
 
@@ -38,11 +40,13 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- custom filetype detection
 vim.filetype.add({
-    extension = {
-        vert = 'glsl',
-        frag = 'glsl',
-        vs = 'glsl',
-        fs = 'glsl',
-        glsl = 'glsl',
-    },
+  extension = {
+    glsl = "glsl",
+    vert = "glsl",
+    frag = "glsl",
+    geom = "glsl",
+    vs = "glsl",
+    fs = "glsl",
+  },
 })
+

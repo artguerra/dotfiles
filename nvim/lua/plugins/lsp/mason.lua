@@ -1,17 +1,13 @@
 return {
 	"williamboman/mason.nvim",
+  build = ":MasonUpdate",
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
-		-- import mason
 		local mason = require("mason")
-
-		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
-
-		-- import mason-tool-installer
 		local mason_tool_installer = require("mason-tool-installer")
 
 		-- enable mason and configure icons
@@ -26,7 +22,6 @@ return {
 		})
 
 		mason_lspconfig.setup({
-			-- list of servers for mason to install
 			ensure_installed = {
 				"eslint",
 				"html",
@@ -39,7 +34,9 @@ return {
 				"rust_analyzer",
 				"dockerls",
 				"jsonls",
+        "glsl_analyzer",
 			},
+      automatic_enable = true,
 		})
 
 		mason_tool_installer.setup({
